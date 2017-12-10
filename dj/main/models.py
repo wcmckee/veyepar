@@ -237,7 +237,7 @@ STATES=[
  (3, 'push to queue'), # push to data center box
  (4, 'post'), # push to yourube and archive.org
  (5, 'richard'), # push urls and description to PyVideo.org
- (6, 'review 1'), # staff check to see if they exist on yourube/archive
+ (6, 'review 1'), # staff check to see if they exist on youtube/archive
  (7, 'email'), # send private url to presenter, ask for feedback,
  (8, 'review 2'), # wait for presenter to say good, or timeout
  (9, 'make public'), # flip private to public
