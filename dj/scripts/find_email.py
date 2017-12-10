@@ -44,11 +44,11 @@ def one_frame( sink,buffer,pad, it):
     else:
         # 2nd part has arrived in buffer, the first is in it.buffer.
         
-        # p = subprocess.Popen(['gocr', '-', '-d', '0', '-a', '95'], 
-        f = open('/tmp/image.pnm','w')
-        f.write(it.buffer)
-        f.write(buffer)
-        f.close()
+        # p = subprocess.Popen(['gocr', '-', '-d', '0', '-a', '95'],
+        with open('/tmp/image.pnm','w') as f: 
+        #f = open('/tmp/image.pnm','w')
+             f.write(it.buffer)
+             f.write(buffer)
         p = subprocess.Popen(it.ocr_cmd)
         x = p.wait()
         ocrtext = open('/tmp/text.txt').read()
